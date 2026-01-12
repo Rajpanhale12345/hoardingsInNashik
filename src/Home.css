@@ -1,0 +1,60 @@
+.headline-typewriter {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.un {
+  color: crimson;
+  margin-right: 0.3rem;
+}
+
+.typed {
+  color: #111;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  height: 1.2em;
+  background-color: black;
+  margin-left: 5px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.vector-images{
+    display: flex;
+flex-wrap: wrap;
+}
+
+.vector-images img{
+  height: 400px;
+  width: 400px;
+   margin-left: 10% ;
+   border-radius: 30px;
+   flex-wrap: wrap;
+}
+.punchline{
+    text-align: center;
+    color: rgb(211, 134, 12);
+    font-size: 2rem;
+}
+@media (max-width : 768px) {
+  .headline-typewriter{
+    font-size: 2rem;
+  }
+}
+@media (max-width : 768px) {
+  .vector-images{
+    margin-right: -30px;
+  }
+}

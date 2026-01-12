@@ -1,0 +1,70 @@
+/* Reset & Base Setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Root container */
+#root {
+  max-width: 1440px; /* Slightly larger for ultra-wide screens */
+  margin: 0 auto;
+  padding: 2rem 3rem;
+}
+
+/* Logo Styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card Component */
+.card {
+  padding: 2em;
+}
+
+/* Documentation Note */
+.read-the-docs {
+  color: #888;
+}
+
+/* Optional: large screen media query for future layout expansions */
+@media (min-width: 1600px) {
+  #root {
+    max-width: 1600px;
+    padding: 2rem 4rem;
+  }
+}
