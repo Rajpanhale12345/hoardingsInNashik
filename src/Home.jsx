@@ -65,16 +65,16 @@ function Home() {
 
       <div style={{ color : 'black'}} className='vector-images'>
 
-<img src={mumbainaka} alt="" />
-<img src={collegeroad} alt="" />
-<img src={MGroad} alt="" />
-<img src={Dwarka} alt="" />
-<img src={CBS} alt="" />
-<img src={Satpur} alt="" />
-<img src={Sinnar} alt="" />
-<img src={Untewadi} alt="" />
-<img src={Pachavati} alt="" />
-<img src={Nashikroad} alt="" />
+<img src={mumbainaka} alt="Mumbai Naka Nashik" />
+<img src={collegeroad} alt="College Road Nashik" />
+<img src={MGroad} alt="MG Road Nashik" />
+<img src={Dwarka} alt="Dwarka Nashik" />
+<img src={CBS} alt="CBS Nashik" />
+<img src={Satpur} alt="Satpur Nashik" />
+<img src={Sinnar} alt="Sinner Nashik" />
+<img src={Untewadi} alt="Untewadi Nashik" />
+<img src={Pachavati} alt="Panchavati Nashik" />
+<img src={Nashikroad} alt="Nashik Road Nashik" />
 
     </div>
     </div>

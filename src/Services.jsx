@@ -29,6 +29,17 @@ import pipelineroad from "./images/grid3.jpeg";
 import trimbakroad from "./images/grid1.jpeg";
 
 function Hoardings() {
+  const SITE_NAME = "Hoardings In Nashik"; 
+  const SITE_URL = "https://hoardingsinnashik.com/"; 
+  const PAGE_PATH = "/hoardings"; 
+  const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+  const OG_IMAGE = `${SITE_URL}/assets/og/hoardings.jpg`;
+
+  const title = `Top Hoarding Locations in Nashik`;
+  const description =
+    "Explore prime hoarding (billboard) locations across Nashik including City Central Mall, Mumbai Naka, College Road, Panchavati, and more. Book your outdoor advertising today.";
+
+
   const hoardings = [
     {
       id: 1,
@@ -173,11 +184,68 @@ function Hoardings() {
       name: "Pipeline Road",
       area: "Pipeline Road, Nashik",
       image: pipelineroad
-    }   
-  ];
+    }
+  ]; 
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: SITE_NAME,
+    url: SITE_URL,
+    areaServed: ["Nashik, Maharashtra, India"],
+    knowsAbout: ["Outdoor Advertising", "Hoardings", "Billboards", "OOH Advertising"]
+  };
+
+  // Optional: ItemList schema for your location list
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Hoarding Locations in Nashik",
+    itemListElement: hoardings.map((h, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: h.name,
+      item: {
+        "@type": "Place",
+        name: h.name,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Nashik",
+          addressRegion: "Maharashtra",
+          addressCountry: "IN"
+        }
+      }
+    }))
+  };
 
   return (
     <>
+      <Helmet>
+        {/* Basic SEO */}
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={PAGE_URL} />
+        <meta name="robots" content="index,follow" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        {OG_IMAGE ? <meta property="og:image" content={OG_IMAGE} /> : null}
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        {OG_IMAGE ? <meta name="twitter:image" content={OG_IMAGE} /> : null}
+
+        {/* Structured Data */}
+        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(itemListSchema)}</script>
+      </Helmet>
+      
       <br /><br /><br />
 
       <h2 className="page-title">Our Hoarding Locations</h2>
