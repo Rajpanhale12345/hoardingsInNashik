@@ -27,7 +27,7 @@ import devlalicamproad from "./images/grid3.jpeg";
 import bitcopoint from "./images/grid1.jpeg";
 import ashokamark from "./images/grid2.jpeg";
 import pipelineroad from "./images/grid3.jpeg";
-import trimbakroad from "./images/grid1.jpeg";
+import trimbakroad from "./images/grid3.jpeg";
 
 function Hoardings() {
   const SITE_NAME = "Hoardings In Nashik"; 
