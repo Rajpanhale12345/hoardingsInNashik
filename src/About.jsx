@@ -98,13 +98,15 @@ function About() {
 
       <main className="text" id="about-content">
         <section aria-labelledby="who-we-are">
-          <h2 id="who-we-are" className="title">Who we are</h2>
+          <h2 id="who-we-are" className="title">About Us</h2>
 
           <p className="normalText" style={{ fontSize: "14px" }}>
-            <strong>{PRIMARY_KEYWORD}</strong> is an outdoor advertising (OOH) service by <strong>{BRAND}</strong>,
-            focused on delivering high-visibility <strong>hoarding and billboard advertising in Nashik</strong>.
-            We help brands plan and run campaigns through location-led media strategy, execution support, and
-            on-ground maintenance.
+            Brand Banao.Ai offers Hoardings across the Nashik OOH sector, aimed at providing effective high-visibility
+            hoarding and billboard advertising for local advertisers looking for locations where they want to advertise.
+            As many advertisers have made us their 'Top Choice' in Hoarding Advertising via our reputation as the 'Best
+            Hoarding Agency in Nashik' will provide you support on strategic location-driven media planning, support with
+            executing your campaigns, and provide you ongoing ground level support with maintenance of your hoardings in
+            the Nashik region.
           </p>
         </section>
 
@@ -112,52 +114,59 @@ function About() {
           <h2 id="experience" className="title">Experience & media foundation</h2>
 
           <p className="normalText" style={{ fontSize: "14px" }}>
-            Operating under <strong>{LEGAL_ENTITY}</strong> and supported by <strong>{PARTNER}</strong> (an
-            Out-of-Home media owner), our foundation is built on <strong>16+ years</strong> of direct outdoor
-            advertising experience. This enables reliable coordination across creative guidance, production
-            workflows, and campaign execution.
+            Functioning under the umbrella of AHP Resolute Pvt. Ltd. and backed by PANA Enterprises (a well-established
+            Out-of-Home media owner), our roots are grounded in more than 16 years of practical outdoor advertising
+            experience. We use our extensive experience and knowledge to provide a comprehensive solution for businesses
+            providing creative direction, production and execution of your campaign make us a premier option for advertisers
+            searching for a 'Best Hoarding Agency in Nashik' who have provided them the level of confidence and ability to
+            execute their advertising campaigns through creative local knowledge.
           </p>
         </section>
 
         <section aria-labelledby="what-we-do" style={{ marginTop: "14px" }}>
-          <h2 id="what-we-do" className="title">What we do in Nashik</h2>
+          <h2 id="what-we-do" className="title">What we Do in Nashik</h2>
 
           <ul className="normalText" style={{ fontSize: "14px", marginTop: "10px" }}>
-            <li><strong>Hoarding site selection</strong> across major routes and hubs in Nashik</li>
-            <li><strong>Creating a campaign</strong> based on your target audience and desired duration</li>
-            <li><strong>Providing creative</strong> help for outdoor-ready layouts and messaging</li>
-            <li><strong>Providing printing</strong> services for production coordination</li>
-            <li><strong>Routine upkeep</strong> of the hoardings to ensure they remain clean, bold, and legible
-              retroactively</li>
+            <li>Select Promotional Hoarding locations strategically placed throughout Nashik high traffic routes and/or
+              prominent areas of Nashik.</li>
+            <li>Develop planning for your campaign based on your Advertising Objective; specifically designed to strategically
+              reach your Customer.</li>
+            <li>Providing you with Creative Assistance when designing your Outdoor Creative (We know what works).</li>
+            <li>Coordinating the Printing and Execution of your Hoarding to ensure a process of seamless execution.</li>
+            <li>Providing Regular Maintenance of your Hoardings to ensure they remain Clean, Visible, and Easily Visible over
+              Time.</li>
           </ul>
 
           <p className="normalText" style={{ fontSize: "14px", marginTop: "10px" }}>
-            We created hoardings in Nashik to make it easier for brands to find locations with good visibility,
-            relevance, and campaign goals (e.g., metro splits, highways, business districts, and emerging
-            residential communities).
+            We provide the visibility of brands and their relevance to location through the provision of hoardings in Nashik,
+            which allows brands to evaluate potential sites for their campaigns by providing a variety of options when selecting
+            a hoarding site based on their campaign objectives along highways, commercial and business centers, metro splits,
+            and residential areas. Hoarding's market position has been established through our continual development as an
+            authorised agency in installation and maintenance of the top three hoarding advertising firms in Nashik for brands
+            advertising for a long time when the brand has an outdoor presence.
           </p>
         </section>
 
         <section aria-labelledby="why-outdoor" style={{ marginTop: "14px" }}>
-          <h2 id="why-outdoor" className="title">Why hoarding advertising works in Nashik</h2>
+          <h2 id="why-outdoor" className="title">Why Hoarding Advertising in Nashik is Effective</h2>
 
           <p className="normalText" style={{ fontSize: "14px" }}>
-            As Nashik continues to evolve into a business and real estate centre, outdoor advertising creates brand
-            <strong> presence, trust, and brand recall</strong>. Unlike digital impressions that are temporary,
-            hoardings provide consistent, easy, and reliable visibility between daytime and nighttime purchase
-            routes within the geographical area.
+            The locations for the hoardings are all growing rapidly; therefore, outdoor advertising plays an important role
+            in developing brand awareness through building credibility for your brand. Hoarding advertisements provide ongoing
+            exposure 24/7 to the people traveling to work and back home each day, thus enabling the establishment of repeat
+            exposure in the same geographical area to build an identity for your brand.
           </p>
         </section>
 
         <section aria-labelledby="summary" style={{ marginTop: "14px" }}>
-          <h2 id="summary" className="title">Summary</h2>
+          <h2 id="summary" className="title">Conclusion</h2>
 
           <p className="normalText" style={{ fontSize: "14px" }}>
-            Hoarding Advertising in Nashik is more than simply putting up a billboard. It means putting your brand 
-            where your audience sees it frequently on the routes they travel every day and within the places they 
-            already know about. Having significant outdoor experience, local coordination, and a strong capability 
-            to execute within the region allows us to help brands run campaigns that will be visible, credible, and 
-            remain effective over time.
+            Hoardings are not simply billboards. It is an opportunity to have your brand on the path(s) of the demographic 
+            you are targeting, along the same route or in proximity to where they are used to seeing your brand on their 
+            way to or from work, in an area they already know. Through locally based expertise in the outdoor industry, 
+            excellent execution, and the ability to deliver long-term branded/campaigns, we help brands achieve marketing 
+            objectives.
           </p>
         </section>
 
