@@ -118,7 +118,7 @@ function About() {
             Out-of-Home media owner), our roots are grounded in more than 16 years of practical outdoor advertising
             experience. We use our extensive experience and knowledge to provide a comprehensive solution for businesses
             providing creative direction, production and execution of your campaign make us a premier option for advertisers
-            searching for a 'Best Hoarding Agency in Nashik' who have provided them the level of confidence and ability to
+            searching for a 'Top Hoarding Agency in Nashik' who have provided them the level of confidence and ability to
             execute their advertising campaigns through creative local knowledge.
           </p>
         </section>
