@@ -30,13 +30,14 @@ import pipelineroad from "./images/grid3.jpeg";
 import trimbakroad from "./images/grid3.jpeg";
 
 function Hoardings() {
-  const SITE_NAME = "Hoardings In Nashik"; 
-  const SITE_URL = "https://hoardingsinnashik.com/"; 
-  const PAGE_PATH = "/hoardings"; 
+  const SITE_NAME = "Hoardings In Nashik";
+  const SITE_URL = "https://hoardingsinnashik.com"; 
+  const PAGE_PATH = "/services";
   const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-  const OG_IMAGE = `${SITE_URL}/assets/og/hoardings.jpg`;
+  const OG_IMAGE = `https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png`;
 
-  const title = `Top Hoarding Locations in Nashik`;
+
+  const title = `Services | Hoardings In Nashik`;
   const description =
     "Explore prime hoarding (billboard) locations across Nashik including City Central Mall, Mumbai Naka, College Road, Panchavati, and more. Book your outdoor advertising today.";
 
@@ -186,7 +187,7 @@ function Hoardings() {
       area: "Pipeline Road, Nashik",
       image: pipelineroad
     }
-  ]; 
+  ];
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -222,34 +223,27 @@ function Hoardings() {
   return (
     <>
       <Helmet>
-        {/* Basic SEO */}
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index,follow" />
-
-        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         {OG_IMAGE ? <meta property="og:image" content={OG_IMAGE} /> : null}
-
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         {OG_IMAGE ? <meta name="twitter:image" content={OG_IMAGE} /> : null}
-
-        {/* Structured Data */}
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(itemListSchema)}</script>
       </Helmet>
-      
+
       <br /><br /><br />
 
-      <h2 className="page-title">Our Hoarding Locations</h2>
+      <h1 className="page-title">Our Hoarding Locations</h1>
 
       <div className="hoardings-flex">
         {hoardings.map((item) => (

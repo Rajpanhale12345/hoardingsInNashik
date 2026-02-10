@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet";
 
 
 function Contact() {
-  const SITE_NAME = "Your Brand Name";
-  const SITE_URL = "https://hoardingsinnashik.com/contact";
+  const SITE_NAME = "Hoardings In Nashik";
+  const SITE_URL = "https://hoardingsinnashik.com";
   const PAGE_PATH = "/contact";
   const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-  const OG_IMAGE = `https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png`;
+  const OG_IMAGE = `https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png`
 
   const title = `Contact Us | ${SITE_NAME}`;
   const description =
@@ -50,25 +50,53 @@ function Contact() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${SITE_URL}#organization`,
     name: SITE_NAME,
     url: SITE_URL,
-    // Add these if you have them:
-    // logo: `${SITE_URL}/assets/logo.png`,
-    // sameAs: ["https://www.linkedin.com/company/...", "https://twitter.com/..."],
+    logo: OG_IMAGE,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        availableLanguage: ["en", "hi", "mr"],
+        telephone: "+9156784242",
+        areaServed: "IN"
+      }
+    ],
+    sameAs: []
   };
+
 
   const contactPageSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
+    "@id": `${PAGE_URL}#contactpage`,
     name: "Contact Us",
     url: PAGE_URL,
     description,
+    inLanguage: "en-IN",
     isPartOf: {
       "@type": "WebSite",
+      "@id": `${SITE_URL}#website`,
       name: SITE_NAME,
-      url: SITE_URL,
+      url: SITE_URL
     },
+    about: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}#organization`
+    }
   };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Contact", item: PAGE_URL }
+    ]
+  };
+
+
 
   return (
     <>
@@ -77,26 +105,29 @@ function Contact() {
         <meta name="description" content={description} />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index,follow" />
+
+        {/* Open Graph */}
+        <meta property="og:locale" content="en_IN" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        {OG_IMAGE ? <meta property="og:image" content={OG_IMAGE} /> : null}
+        <meta property="og:image" content={OG_IMAGE} />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        {OG_IMAGE ? <meta name="twitter:image" content={OG_IMAGE} /> : null}
+        <meta name="twitter:image" content={OG_IMAGE} />
+
         <meta name="theme-color" content="#0b0b0b" />
-        
-        
+
         <script type="application/ld+json">
-          {JSON.stringify(organizationSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(contactPageSchema)}
+          {JSON.stringify([organizationSchema, contactPageSchema, breadcrumbSchema])}
         </script>
       </Helmet>
+
 
 
       <div className="contact-wrapper">
@@ -110,6 +141,8 @@ function Contact() {
               name="name"
               className="form-input"
               required
+              minLength={2}
+              autoComplete="name"
               value={formData.name}
               onChange={handleChange}
             />
@@ -123,6 +156,8 @@ function Contact() {
               name="email"
               className="form-input"
               required
+              autoComplete="email"
+              inputMode="email"
               value={formData.email}
               onChange={handleChange}
             />
@@ -135,6 +170,8 @@ function Contact() {
               name="message"
               className="form-textarea"
               required
+              minLength={10}
+              autoComplete="off"
               value={formData.message}
               onChange={handleChange}
             ></textarea>

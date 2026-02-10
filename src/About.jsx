@@ -4,50 +4,66 @@ import './About.css';
 import { Helmet } from "react-helmet";
 
 function About() {
-  // ✅ ADDED: Reusable page constants (helps consistency + AI extraction)
-  const PAGE_URL = "https://hoardingsinnashik.com/about";
+  // Constants
+  const SITE_URL = "https://hoardingsinnashik.com";
   const SITE_NAME = "Hoardings in Nashik";
-  const BRAND = "BrandBanao.Ai";
+  const PAGE_PATH = "/about";
+  const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+  const OG_IMAGE = `https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png`;
   const LEGAL_ENTITY = "AHP Resolute Pvt. Ltd.";
+  const BRAND = "BrandBanao.Ai";
   const PARTNER = "PANA Enterprises";
-  const PRIMARY_KEYWORD = "Hoardings in Nashik";
 
-  // ✅ ADDED: JSON-LD structured data for AI/Answer Engines + rich results
-  // Note: No address/phone added because you didn't provide them (avoid SEO trust issues).
+  const title = `About | Outdoor (OOH) Advertising in Nashik`;
+  const description =
+    "Learn about Hoardings in Nashik—end-to-end outdoor (OOH) advertising support including site planning, printing coordination, execution, and hoarding maintenance across Nashik.";
+
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": `About | ${SITE_NAME}`,
-      "url": PAGE_URL,
-      "description":
-        "Learn about Hoardings in Nashik—premium outdoor advertising (OOH) solutions including hoarding and billboard site selection, campaign execution, printing support, and maintenance in Nashik.",
-      "isPartOf": {
+      "@type": "AboutPage",
+      "@id": `${PAGE_URL}#aboutpage`,
+      url: PAGE_URL,
+      name: title,
+      description,
+      inLanguage: "en-IN",
+      isPartOf: {
         "@type": "WebSite",
-        "name": SITE_NAME,
-        "url": "https://hoardingsinnashik.com/"
+        "@id": `${SITE_URL}#website`,
+        name: SITE_NAME,
+        url: SITE_URL
       },
-      "about": [
-        { "@type": "Thing", "name": "Outdoor advertising" },
-        { "@type": "Thing", "name": "Out-of-home advertising" },
-        { "@type": "Place", "name": "Nashik" }
-      ],
-      "primaryImageOfPage": {
+      primaryImageOfPage: {
         "@type": "ImageObject",
-        "url": "https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png"
+        url: OG_IMAGE
       },
-      "inLanguage": "en-IN"
+      about: [
+        { "@type": "Thing", name: "Outdoor advertising" },
+        { "@type": "Thing", name: "Out-of-home advertising" },
+        { "@type": "Place", name: "Nashik" }
+      ],
+      mainEntity: {
+        "@type": "Organization",
+        "@id": `${SITE_URL}#organization`
+      }
     },
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": SITE_NAME,
-      "url": "https://hoardingsinnashik.com/",
-      "brand": { "@type": "Brand", "name": BRAND },
-      "description":
-        "Outdoor advertising (OOH) service focused on hoardings and billboards in Nashik with end-to-end planning, execution, and maintenance.",
-      "sameAs": [
-        // ✅ ADDED: Put real social/profile URLs here if you have them (leave empty otherwise)
+      "@id": `${SITE_URL}#organization`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      description:
+        "OOH (outdoor) advertising service in Nashik focused on hoardings and billboards with planning, execution, and maintenance.",
+      sameAs: [],
+      knowsAbout: ["Hoardings", "Billboards", "Outdoor Advertising", "OOH Advertising"],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "About", item: PAGE_URL }
       ]
     }
   ];
@@ -55,26 +71,21 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About | Hoarding & Billboard Advertising in Nashik</title>
-        <meta name="description" content="About Hoardings in Nashik: premium outdoor advertising (OOH) for Nashik—hoarding & billboard site selection, campaign planning, printing support, execution, and maintenance backed by 16+ years of experience." />
-        <meta name="keywords" content="Hoardings in Nashik, Billboard Advertising Nashik, Outdoor Advertising Nashik, OOH Media Nashik, Hoarding Agency Nashik, Billboard Rental Nashik, Outdoor Media Owner Nashik" />
-        <meta name="author" content={SITE_NAME} />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="language" content="en-IN" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <link rel="canonical" href={PAGE_URL} />
+        <meta name="robots" content="index,follow" />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={`About ${SITE_NAME} | Outdoor Advertising (OOH) in Nashik`} />
-        <meta property="og:description" content="Discover how Hoardings in Nashik delivers high-visibility hoarding and billboard advertising in Nashik with end-to-end planning, execution, and maintenance." />
-        <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:image" content="https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png" />
         <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={OG_IMAGE} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`About ${SITE_NAME} | Hoardings & Billboards in Nashik`} />
-        <meta name="twitter:description" content="Premium outdoor advertising in Nashik: hoardings & billboards with location planning, execution, and maintenance backed by 16+ years of OOH experience." />
-        <meta name="twitter:image" content="https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={OG_IMAGE} />
         <meta name="theme-color" content="#000000" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
@@ -162,10 +173,10 @@ function About() {
           <h2 id="summary" className="title">Conclusion</h2>
 
           <p className="normalText" style={{ fontSize: "14px" }}>
-            Hoardings are not simply billboards. It is an opportunity to have your brand on the path(s) of the demographic 
-            you are targeting, along the same route or in proximity to where they are used to seeing your brand on their 
-            way to or from work, in an area they already know. Through locally based expertise in the outdoor industry, 
-            excellent execution, and the ability to deliver long-term branded/campaigns, we help brands achieve marketing 
+            Hoardings are not simply billboards. It is an opportunity to have your brand on the path(s) of the demographic
+            you are targeting, along the same route or in proximity to where they are used to seeing your brand on their
+            way to or from work, in an area they already know. Through locally based expertise in the outdoor industry,
+            excellent execution, and the ability to deliver long-term branded/campaigns, we help brands achieve marketing
             objectives.
           </p>
         </section>
