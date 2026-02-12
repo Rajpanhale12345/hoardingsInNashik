@@ -4,29 +4,29 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 // Import images individually
-import cityCentral from "./images/grid1.jpeg";
-import mumbaiNaka from "./images/grid2.jpeg";
+import cityCentral from "./images/CCM.png";
+import mumbaiNaka from "./images/Mumbai_naka.png";
 import ashokStambh from "./images/grid3.jpeg";
-import gangapurRoad from "./images/grid1.jpeg";
-import collegeRoad from "./images/grid2.jpeg";
-import pathardiPhata from "./images/grid3.jpeg";
+import gangapurRoad from "./images/Gangapur_Road.png";
+import collegeRoad from "./images/College_Road.png";
+import pathardiPhata from "./images/Pathardi_road.png";
 import jihandcircle from "./images/grid1.jpeg";
 import dongarewastigruh from "./images/grid2.jpeg";
 import mycocircle from "./images/grid1.jpeg";
 import abpcircle from "./images/grid2.jpeg";
-import indiranagar from "./images/grid3.jpeg";
-import nashikroad from "./images/grid1.jpeg";
-import jailroad from "./images/grid2.jpeg";
+import indiranagar from "./images/Indira_nagar.png";
+import nashikroad from "./images/Nashik_road.png";
+import jailroad from "./images/Jail_Road.png";
 import adgaonnaka from "./images/grid3.jpeg";
-import trimurtichauck from "./images/grid1.jpeg";
+import trimurtichauck from "./images/Trimurti_chowk.png";
 import cbs from "./images/grid2.jpeg";
 import panchavati from "./images/grid3.jpeg";
 import ravivarkaranja from "./images/grid1.jpeg";
 import satputmidc from "./images/grid2.jpeg";
 import devlalicamproad from "./images/grid3.jpeg";
-import bitcopoint from "./images/grid1.jpeg";
-import ashokamark from "./images/grid2.jpeg";
-import pipelineroad from "./images/grid3.jpeg";
+import bytcopoint from "./images/Byto_chowk.png";
+import ashokamark from "./images/Ashoka_marg.png";
+import pipelineroad from "./images/Pipeline_road.png";
 import trimbakroad from "./images/grid3.jpeg";
 
 function Hoardings() {
@@ -173,7 +173,7 @@ function Hoardings() {
       id: 22,
       name: "Bytco Point",
       area: "Bytco Point, Nashik",
-      image: bitcopoint
+      image: bytcopoint
     },
     {
       id: 23,
