@@ -37,7 +37,7 @@ function Hoardings() {
   const OG_IMAGE = `https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png`;
 
 
-  const title = `Services | Hoardings In Nashik`;
+  const title = `Services | Top Hoarding Locations In Nashik`;
   const description =
     "Explore prime hoarding (billboard) locations across Nashik including City Central Mall, Mumbai Naka, College Road, Panchavati, and more. Book your outdoor advertising today.";
 

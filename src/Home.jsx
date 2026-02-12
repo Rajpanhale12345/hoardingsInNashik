@@ -47,7 +47,7 @@ function Home() {
     <>
 
       <Helmet>
-        <title>Hoardings in Nashik | Premium Outdoor (OOH) Advertising Locations</title>
+        <title>Top Hoardings in Nashik | Best Hoardings in Nashik</title>
         <meta name="description" content="Book premium hoardings in Nashik across Mumbai Naka, College Road, MG Road, Dwarka, CBS, Satpur, Sinnar, Panchavati and more. Strategic OOH placements made simple." />
         <meta name="keywords" content="hoardings in nashik, billboard advertising nashik, outdoor advertising nashik, ooh advertising nashik, hoarding locations nashik" />
         <meta name="robots" content="index, follow" />
