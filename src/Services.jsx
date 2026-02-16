@@ -105,8 +105,8 @@ function Hoardings() {
     },
     {
       id: 11,
-      name: "ABP Circle",
-      area: "ABP Circle, Nashik",
+      name: "ABB Circle",
+      area: "ABB Circle, Nashik",
       image: abpcircle
     },
     {

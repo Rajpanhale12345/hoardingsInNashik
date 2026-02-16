@@ -14,6 +14,7 @@ const Footer = () => {
           <Link to="/about">About</Link>
           <Link to="/services">Services</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/Blog">Blogs</Link>
         </nav>
 
         <p className="footer-copy">&copy; {new Date().getFullYear()} <Link to="https://brandbanao.ai/">Brand Banao.Ai.</Link> All rights reserved.</p>
