@@ -10,6 +10,8 @@ function Blog() {
   const SITE_URL = "https://hoardingsinnashik.com";
   const PAGE_URL = `${SITE_URL}/blog`;
 
+  const OG_IMAGE = "https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png";
+
   const title = "Outdoor Advertising Blog | Hoardings In Nashik";
   const description =
     "Expert guides on best hoarding locations in Nashik, outdoor advertising cost, booking process, and brand visibility strategies.";
@@ -19,21 +21,48 @@ function Blog() {
       id: 1,
       slug: "best-hoarding-location-in-nashik-for-maximum-brand-visibility",
       image: blog1,
-      title:
-        "Best Hoarding Locations in Nashik for Maximum Visibility (2026)",
-      excerpt:
-        "Discover high traffic hoarding locations in Nashik that deliver maximum impressions and better ROI."
+      title: "Best Hoarding Locations in Nashik for Maximum Visibility (2026)",
+      excerpt: "Discover high traffic hoarding locations in Nashik that deliver maximum impressions and better ROI.",
+      datePublished: "2026-02-13"
     },
     {
       id: 2,
       slug: "hoarding-advertising-in-nashik-guide",
       image: blog2,
-      title:
-        "Hoarding Design Tips for Nashik: What Works on High-Speed Roads and Signals",
-      excerpt:
-        "Design smarter Nashik hoardings for speed, signals, and maximum brand recall"
+      title: "Hoarding Design Tips for Nashik: What Works on High-Speed Roads and Signals",
+      excerpt: "Design smarter Nashik hoardings for speed, signals, and maximum brand recall",
+      datePublished: "2026-02-14"
     }
   ];
+
+  const blogItems = blogs.map((b) => ({
+    ...b,
+    url: `${SITE_URL}/blog/${b.slug}`
+  }));
+
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: title,
+    description,
+    url: PAGE_URL,
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL
+    }
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: blogItems.map((b, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      url: b.url,
+      name: b.title
+    }))
+  };
 
   return (
     <>
@@ -42,6 +71,25 @@ function Blog() {
         <meta name="description" content={description} />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index,follow" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:alt" content="Hoardings In Nashik - Outdoor Advertising Blog" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+
+        {/* Structured data */}
+        <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(itemListSchema)}</script>
       </Helmet>
 
       <br /><br /><br />

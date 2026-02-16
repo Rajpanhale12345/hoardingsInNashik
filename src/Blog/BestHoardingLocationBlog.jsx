@@ -10,20 +10,45 @@ function BestHoardingLocationBlog() {
     const PAGE_PATH = "/blog/best_hoarding_location_in_nashik";
     const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
-    const title = "Best Hoarding Location in Nashik for Maximum Brand Visibility (2026 Guide)";
-    const description = "Discover the best hoarding location in Nashik for maximum brand visibility, high traffic exposure, and better ROI. Complete 2026 outdoor advertising guide.";
+    const title =
+        "Best Hoarding Location in Nashik for Maximum Brand Visibility (2026 Guide)";
+    const description =
+        "Discover the best hoarding location in Nashik for maximum brand visibility, high traffic exposure, and better ROI. Complete 2026 outdoor advertising guide.";
+
+    const coverUrl = blogCover?.startsWith("http")
+        ? blogCover
+        : `${SITE_URL}${blogCover}`;
+
+    const publishedDate = "2026-02-13";
+    const modifiedDate = "2026-02-13";
 
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         headline: title,
-        description: description,
-        datePublished: "2026-02-13",
+        description,
+        image: [coverUrl],
+        datePublished: publishedDate,
+        dateModified: modifiedDate,
         author: {
             "@type": "Organization",
-            name: SITE_NAME
+            name: SITE_NAME,
+            url: SITE_URL,
         },
-        mainEntityOfPage: PAGE_URL
+        publisher: {
+            "@type": "Organization",
+            name: SITE_NAME,
+            url: SITE_URL,
+            logo: {
+                "@type": "ImageObject",
+                url: `${SITE_URL}/assets/Nashiklogo-D7jJA0bl.png`,
+            },
+        },
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": PAGE_URL,
+        },
+        url: PAGE_URL,
     };
 
     return (
@@ -33,17 +58,17 @@ function BestHoardingLocationBlog() {
                 <meta name="description" content={description} />
                 <link rel="canonical" href={PAGE_URL} />
                 <meta name="robots" content="index,follow" />
-
                 <meta property="og:type" content="article" />
                 <meta property="og:site_name" content={SITE_NAME} />
                 <meta property="og:url" content={PAGE_URL} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:image" content={`${SITE_URL}/assets/blog/blog1.jpg`} />
-
+                <meta property="og:image" content={coverUrl} />
+                <meta property="og:image:alt" content="Best hoarding location in Nashik for maximum brand visibility" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={coverUrl} />
 
                 <script type="application/ld+json">
                     {JSON.stringify(articleSchema)}
@@ -74,6 +99,9 @@ function BestHoardingLocationBlog() {
                     src={blogCover}
                     alt="Best hoarding location in Nashik for maximum brand visibility"
                     className="post-cover"
+                    loading="lazy"
+                    width="1200"
+                    height="630"
                 />
 
                 <div className="post-content">
@@ -225,7 +253,7 @@ function BestHoardingLocationBlog() {
                     <h3 style={{ color: "black" }}>If your goal is Event Promotion</h3>
                     <p>Choose:</p>
 
-                    <ul style={{color : "black"}}>
+                    <ul style={{ color: "black" }}>
                         <li>Major entry/exit routes</li>
                         <li>High-speed highways with long visibility distance</li>
                         <li>Areas near event venues</li>
@@ -256,7 +284,7 @@ function BestHoardingLocationBlog() {
 
                     <p>They:</p>
 
-                    <ul style={{color : "black"}}>
+                    <ul style={{ color: "black" }}>
                         <li>Build subconscious brand familiarity</li>
                         <li>Create local dominance</li>
                         <li>Increase credibility instantly</li>

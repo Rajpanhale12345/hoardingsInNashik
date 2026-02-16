@@ -9,24 +9,47 @@ function BestHoardingLocationBlog() {
     const SITE_URL = "https://hoardingsinnashik.com";
     const PAGE_PATH = "/blog/hoarding-advertising-in-nashik-guide";
     const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-    const OG_IMAGE = `https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png`; 
+
+    // Prefer an absolute URL for social previews
+    const OG_IMAGE = "https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png";
 
     const title = "Hoarding Design Tips for Nashik";
     const description =
         "Learn the best hoarding design tips in Nashik for high-speed roads and signal junctions. Fonts, colors, layouts, QR codes & local targeting for higher ROI.";
 
+    const publishedDate = "2026-02-14";
+    const modifiedDate = "2026-02-14";
+
+    // If your build outputs a relative path for imports, you can also provide an absolute fallback:
+    const coverUrl = blogCover?.startsWith("http") ? blogCover : `${SITE_URL}${blogCover}`;
+
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         headline: title,
-        description: description,
-        datePublished: "2026-02-14",
+        description,
+        url: PAGE_URL,
+        image: [coverUrl], // or [OG_IMAGE] if you want logo as the schema image
+        datePublished: publishedDate,
+        dateModified: modifiedDate,
         author: {
             "@type": "Organization",
-            name: SITE_NAME
+            name: SITE_NAME,
+            url: SITE_URL,
         },
-        mainEntityOfPage: PAGE_URL
+        publisher: {
+            "@type": "Organization",
+            name: SITE_NAME,
+            url: SITE_URL,
+            // Optional logo
+            // logo: { "@type": "ImageObject", url: `${SITE_URL}/assets/logo.png` }
+        },
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": PAGE_URL,
+        },
     };
+
 
     return (
         <>
@@ -35,31 +58,21 @@ function BestHoardingLocationBlog() {
                 <meta name="description" content={description} />
                 <link rel="canonical" href={PAGE_URL} />
                 <meta name="robots" content="index,follow" />
-
-                {/* Helpful for AI/search understanding */}
                 <meta name="keywords" content="hoarding design tips nashik, billboard design nashik, high speed road hoarding design nashik, signal hoarding design nashik, outdoor advertising design nashik, ooh creative nashik" />
-
-                {/* Open Graph */}
                 <meta property="og:type" content="article" />
                 <meta property="og:site_name" content={SITE_NAME} />
                 <meta property="og:url" content={PAGE_URL} />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={OG_IMAGE} />
-
-                {/* Twitter */}
+                <meta property="og:image:alt" content="Hoarding design tips for Nashik high-speed roads and signals" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={description} />
                 <meta name="twitter:image" content={OG_IMAGE} />
-
-                {/* Optional: stronger snippet control */}
                 <meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
 
-
-                <script type="application/ld+json">
-                    {JSON.stringify(articleSchema)}
-                </script>
+                <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
             </Helmet>
 
             <br /><br /><br />
@@ -83,8 +96,11 @@ function BestHoardingLocationBlog() {
 
                 <img
                     src={blogCover}
-                    alt="Best hoarding location in Nashik for maximum brand visibility"
+                    alt="Hoarding design tips for Nashik: high-speed roads and signal junctions"
                     className="post-cover"
+                    loading="lazy"
+                    width="1200"
+                    height="630"
                 />
 
                 <div className="post-content">

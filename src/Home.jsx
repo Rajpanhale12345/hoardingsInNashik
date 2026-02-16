@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Billboard1 from './images/Billboard1.jpg';
-import mockup from './images/mockup2.jpg';
+import Billboard1 from './Blog/Images/Jail_Road.png';
+import mockup from './Blog/Images/BestHoardingLocation.webp';
 import './Home.css';
-import collegeroad from './images/collegeroad.png';
-import Dwarka from './images/Dwarka.png';
-import MGroad from './images/MGroad.png';
-import mumbainaka from './images/mumbainaka.png';
-import CBS from './images/CBS.png';
-import Satpur from './images/Satpur.png';
-import Sinnar from './images/Sinnar.png';
-import Untewadi from './images/Untewadi.png';
-import Pachavati from './images/panchavati.png';
-import Nashikroad from './images/Nashikroad.png';
+import collegeroad from './images/College_Road.png';
+import Dwarka from './images/Ashoka_marg.png';
+import MGroad from './images/CCM.png';
+import mumbainaka from './images/Mumbai_naka.png';
+import CBS from './images/Byto_chowk.png';
+import Satpur from './images/Gangapur_Road.png';
+import Sinnar from './images/Trimurti_chowk.png';
+import Untewadi from './images/Indira_nagar.png';
+import Pachavati from './images/Pathardi_road.png';
+import Nashikroad from './images/Nashik_road.png';
 import { Helmet } from "react-helmet";
 
 
