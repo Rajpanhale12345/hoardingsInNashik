@@ -37,7 +37,7 @@ function Home() {
       const pause = setTimeout(() => {
         setLetterIndex(0);
         setWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-      }, 2000); // wait before starting next word
+      }, 2000); 
       return () => clearTimeout(pause);
     }
   }, [letterIndex, wordIndex]);

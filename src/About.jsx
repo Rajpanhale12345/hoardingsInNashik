@@ -112,12 +112,13 @@ function About() {
           <h2 id="who-we-are" className="title">About Us</h2>
 
           <p className="normalText" style={{ fontSize: "14px" }}>
-            Brand Banao.Ai offers Hoardings across the Nashik OOH sector, aimed at providing effective high-visibility
-            hoarding and billboard advertising for local advertisers looking for locations where they want to advertise.
-            As many advertisers have made us their 'Top Choice' in Hoarding Advertising via our reputation as the 'Best
-            Hoarding Agency in Nashik' will provide you support on strategic location-driven media planning, support with
-            executing your campaigns, and provide you ongoing ground level support with maintenance of your hoardings in
-            the Nashik region.
+            Brand Banao.Ai is focused on producing results in the outdoor advertisement and hoarding functionality
+            in Nashik. Our billboards provide businesses with a maximum level of visibility to create a strong local
+            and regional presence for their brand. We are excited about the success of OOH (Out-of-Home)
+            advertising as it helps give brands the chance of reaching their target audience using high-quality
+            hoarding products to reach their target audience in Nashik and throughout other very large cities in
+            Maharashtra. The ultimate goal is to have your brand create impressions in the right area of the city
+            with busy roads, business areas, and high-traffic routes within urban Nashik and Maharashtra.
           </p>
         </section>
 
@@ -125,12 +126,12 @@ function About() {
           <h2 id="experience" className="title">Experience & media foundation</h2>
 
           <p className="normalText" style={{ fontSize: "14px" }}>
-            Functioning under the umbrella of AHP Resolute Pvt. Ltd. and backed by PANA Enterprises (a well-established
-            Out-of-Home media owner), our roots are grounded in more than 16 years of practical outdoor advertising
-            experience. We use our extensive experience and knowledge to provide a comprehensive solution for businesses
-            providing creative direction, production and execution of your campaign make us a premier option for advertisers
-            searching for a 'Top Hoarding Agency in Nashik' who have provided them the level of confidence and ability to
-            execute their advertising campaigns through creative local knowledge.
+            With over 16 years of experience in outdoor advertising, Brand Banao.Ai is a brand of AHP Resolute 
+            Pvt. Ltd. and is supported by PANA Enterprises, a renowned player in the OOH media industry. 
+            This strong foundation enables us to execute efficient, scalable, and result-oriented campaigns 
+            for local businesses, regional brands, and growing companies. We truly understand market trends, 
+            location intelligence, and audience movements, which enables us to recommend hoarding locations 
+            that maximise visibility and impact.
           </p>
         </section>
 
