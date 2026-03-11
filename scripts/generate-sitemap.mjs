@@ -3,41 +3,55 @@ import path from "path";
 
 const DOMAIN = "https://hoardingsinnashik.com";
 
-const staticRoutes = ["/", "/about", "/services", "/contact", "/blog"];
+// Static pages
+const staticRoutes = [
+  "/",
+  "/about",
+  "/services",
+  "/contact",
+  "/blog"
+];
 
+// Blog posts
 const blogSlugs = [
   "best-hoarding-location-in-nashik-for-maximum-brand-visibility",
   "hoarding-advertising-in-nashik-guide"
 ];
 
-const blogRoutes = blogSlugs.map((s) => `/blog/${s}`);
+const blogRoutes = blogSlugs.map(slug => `/blog/${slug}`);
 
 const routes = [...staticRoutes, ...blogRoutes];
 
 const today = new Date().toISOString().split("T")[0];
 
-const xml = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes
-  .map((route) => {
-    const priority = route === "/" ? "1.0" : route === "/blog" ? "0.9" : "0.8";
-    const changefreq = route.startsWith("/blog/") ? "weekly" : "monthly";
+${routes.map(route => {
+  const priority =
+    route === "/" ? "1.0" :
+    route === "/blog" ? "0.9" :
+    "0.8";
 
-    return `  <url>
+  const changefreq =
+    route.startsWith("/blog/") ? "weekly" : "monthly";
+
+  return `
+  <url>
     <loc>${DOMAIN}${route}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
-  })
-  .join("\n")}
-</urlset>
-`;
+}).join("")}
+</urlset>`;
 
-const publicDir = path.resolve("public");
-const filePath = path.join(publicDir, "sitemap.xml");
+const publicPath = path.resolve("public");
+const filePath = path.join(publicPath, "sitemap.xml");
 
-if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+if (!fs.existsSync(publicPath)) {
+  fs.mkdirSync(publicPath, { recursive: true });
+}
 
-fs.writeFileSync(filePath, xml, "utf8");
-console.log("✅ Generated public/sitemap.xml with blog routes");
+fs.writeFileSync(filePath, sitemap, "utf8");
+
+console.log("✅ Sitemap generated successfully!");

@@ -23,6 +23,8 @@ function Home() {
   const [wordIndex, setWordIndex] = useState(0);
   const [letterIndex, setLetterIndex] = useState(0);
   const [typedText, setTypedText] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   useEffect(() => {
     const currentWord = words[wordIndex];
@@ -37,17 +39,30 @@ function Home() {
       const pause = setTimeout(() => {
         setLetterIndex(0);
         setWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-      }, 2000); 
+      }, 2000);
       return () => clearTimeout(pause);
     }
   }, [letterIndex, wordIndex]);
+
+  const locationImages = [
+    mumbainaka,
+    collegeroad,
+    MGroad,
+    Dwarka,
+    CBS,
+    Satpur,
+    Sinnar,
+    Untewadi,
+    Pachavati,
+    Nashikroad
+  ];
 
   return (
 
     <>
 
       <Helmet>
-        <title>Top Hoardings in Nashik | Best Hoardings in Nashik</title>
+        <title>Top Hoardings in Nashik - Best Hoardings in Nashik</title>
         <meta name="description" content="Book premium hoardings in Nashik across Mumbai Naka, College Road, MG Road, Dwarka, CBS, Satpur, Sinnar, Panchavati and more. Strategic OOH placements made simple." />
         <meta name="keywords" content="hoardings in nashik, billboard advertising nashik, outdoor advertising nashik, ooh advertising nashik, hoarding locations nashik" />
         <meta name="robots" content="index, follow" />
@@ -76,31 +91,63 @@ function Home() {
 
         <Carousel showThumbs={false} autoPlay infiniteLoop>
           <div>
-            <img src={mockup} alt="Slide 1" />
+            <img src={mockup} alt="Slide 1" loading='lazy' />
           </div>
           <div>
-            <img src={Billboard1} alt="Slide 2" />
+            <img src={Billboard1} alt="Slide 2" loading='lazy' />
           </div>
         </Carousel>
 
         <br /><br /><br />
-        <h2 className='punchline'>Access top-tier OOH placements, seamlessly and strategically...</h2>
+        <h2 className='punchline'>Best hoarding locations in Nashik. Easy booking. Maximum visibility....</h2>
         <br /><br /><br />
 
-        <div style={{ color: 'black' }} className='vector-images'>
-
-          <img src={mumbainaka} alt="Mumbai Naka Nashik" />
-          <img src={collegeroad} alt="College Road Nashik" />
-          <img src={MGroad} alt="MG Road Nashik" />
-          <img src={Dwarka} alt="Dwarka Nashik" />
-          <img src={CBS} alt="CBS Nashik" />
-          <img src={Satpur} alt="Satpur Nashik" />
-          <img src={Sinnar} alt="Sinner Nashik" />
-          <img src={Untewadi} alt="Untewadi Nashik" />
-          <img src={Pachavati} alt="Panchavati Nashik" />
-          <img src={Nashikroad} alt="Nashik Road Nashik" />
-
+        <div className='vector-images'>
+          {locationImages.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt="Nashik hoarding location"
+              loading="lazy"
+              onClick={() => {
+                setSelectedIndex(index);
+                setShowModal(true);
+              }}
+            />
+          ))}
         </div>
+
+        {showModal && (
+          <div className="modal-overlay">
+            <div className="modal-content">
+
+              {/* Close Button */}
+              <button
+                className="close-btn"
+                onClick={() => setShowModal(false)}
+                aria-label="Close"
+              >
+                ×
+              </button>
+
+              <Carousel
+                selectedItem={selectedIndex}
+                showThumbs={false}
+                showStatus={false}
+                infiniteLoop
+                useKeyboardArrows
+                emulateTouch
+              >
+                {locationImages.map((img, index) => (
+                  <div key={index}>
+                    <img src={img} alt="Nashik hoarding location" />
+                  </div>
+                ))}
+              </Carousel>
+
+            </div>
+          </div>
+        )}
       </div>
     </>
 

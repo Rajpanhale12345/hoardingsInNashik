@@ -9,7 +9,8 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import Blog from "./Blog/Blog";
 import BestHoardingLocationBlog from "./Blog/BestHoardingLocationBlog";
-import HoardingAdvertisingNashik from "./Blog/HoardingAdvertisingNashik"; 
+import HoardingAdvertisingNashik from "./Blog/HoardingAdvertisingNashik";
+import Sitemap from "./Sitemap"; 
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/best-hoarding-location-in-nashik-for-maximum-brand-visibility" element={<BestHoardingLocationBlog />} />
         <Route path="/blog/hoarding-advertising-in-nashik-guide" element={<HoardingAdvertisingNashik />} />
+        <Route path="/sitemap" element={<Sitemap />} />
       </Routes>
       <br /><br />
       <Footer />
