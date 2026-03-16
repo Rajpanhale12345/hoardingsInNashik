@@ -109,3 +109,23 @@ html, body, #root {
     margin-right: -37px;
   }
 }
+
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-right: 20px;
+  margin-top: -40px;
+}
+
+.social-icons a {
+  color: rgb(24, 30, 143);
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f39c12;
+  transform: translateY(-2px);
+}
