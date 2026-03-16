@@ -97,8 +97,7 @@
   color: orange;
   transform: translateX(4px);
 }
-
-/* Large desktops */
+ 
 @media (min-width: 1440px) {
   .sitemap-page {
     padding: 130px 32px 80px;
@@ -112,8 +111,7 @@
     padding: 30px 28px;
   }
 }
-
-/* Laptops / medium desktops */
+ 
 @media (max-width: 1200px) {
   .sitemap-page {
     padding: 105px 20px 55px;
@@ -124,8 +122,7 @@
     gap: 22px;
   }
 }
-
-/* Tablets */
+ 
 @media (max-width: 768px) {
   .sitemap-page {
     padding: 95px 16px 45px;
@@ -149,8 +146,7 @@
     margin-bottom: 16px;
   }
 }
-
-/* Small phones */
+ 
 @media (max-width: 480px) {
   .sitemap-page {
     padding: 88px 12px 38px;
@@ -177,8 +173,7 @@
     line-height: 1.5;
   }
 }
-
-/* Very small devices */
+ 
 @media (max-width: 340px) {
   .sitemap-page {
     padding: 84px 10px 32px;

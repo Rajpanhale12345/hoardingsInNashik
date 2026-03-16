@@ -23,8 +23,7 @@ const Navbar = () => {
         <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
         <Link to="/blog" onClick={() => setIsOpen(false)}>Blogs</Link>
       </div>
-
-      {/* Hamburger menu */}
+ 
       <div className="hamburger" onClick={toggleNavbar}>
         <span></span>
         <span></span>

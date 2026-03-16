@@ -120,8 +120,7 @@ function Home() {
         {showModal && (
           <div className="modal-overlay">
             <div className="modal-content">
-
-              {/* Close Button */}
+ 
               <button
                 className="close-btn"
                 onClick={() => setShowModal(false)}

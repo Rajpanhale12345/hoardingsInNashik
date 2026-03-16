@@ -50,27 +50,26 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
   padding: 0 16px;
-  margin: 0 auto;          /* center the grid container */
-  max-width: 1200px;       /* prevents wide stretching on large screens */
+  margin: 0 auto;          
+  max-width: 1200px;       
   box-sizing: border-box;
 }
 
 .vector-images img {
   width: 100%;
-  height: auto;            /* keeps aspect ratio */
-  aspect-ratio: 4 / 3;     /* consistent card size */
+  height: auto;            
+  aspect-ratio: 4 / 3;     
   max-width: 420px;
   border-radius: 24px;
-  object-fit: cover;       /* better than fill */
-  display: block;          /* avoids inline gaps */
-  margin: 0 auto;          /* center inside each grid cell */
+  object-fit: cover;        
+  display: block;           
+  margin: 0 auto;        
 }
-
-/* Mobile */
+ 
 @media (max-width: 768px) {
   .vector-images {
     padding: 0 12px;
-    grid-template-columns: 1fr;  /* one column on mobile */
+    grid-template-columns: 1fr;   
   }
 
   .vector-images img {
@@ -91,9 +90,7 @@
     font-size: 2rem;
   }
 }
-
-
-
+ 
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -166,8 +163,7 @@
 .close-btn:active {
   transform: scale(0.95);
 }
-
-/* Responsive tweaks */
+ 
 @media (max-width: 768px) {
   .modal-content {
     position: relative;

@@ -3,8 +3,7 @@ import hoarding from './images/hoarding.gif';
 import './About.css';
 import { Helmet } from "react-helmet";
 
-function About() {
-  // Constants
+function About() { 
   const SITE_URL = "https://hoardingsinnashik.com";
   const SITE_NAME = "Hoardings in Nashik";
   const PAGE_PATH = "/about";

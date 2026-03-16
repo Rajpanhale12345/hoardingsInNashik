@@ -8,9 +8,7 @@ function BestHoardingLocationBlog() {
     const SITE_NAME = "Hoardings In Nashik";
     const SITE_URL = "https://hoardingsinnashik.com";
     const PAGE_PATH = "/blog/hoarding-advertising-in-nashik-guide";
-    const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-
-    // Prefer an absolute URL for social previews
+    const PAGE_URL = `${SITE_URL}${PAGE_PATH}`; 
     const OG_IMAGE = "https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png";
 
     const title = "Hoarding Design Tips for Nashik";
@@ -19,8 +17,7 @@ function BestHoardingLocationBlog() {
 
     const publishedDate = "2026-02-14";
     const modifiedDate = "2026-02-14";
-
-    // If your build outputs a relative path for imports, you can also provide an absolute fallback:
+ 
     const coverUrl = blogCover?.startsWith("http") ? blogCover : `${SITE_URL}${blogCover}`;
 
     const articleSchema = {
@@ -29,7 +26,7 @@ function BestHoardingLocationBlog() {
         headline: title,
         description,
         url: PAGE_URL,
-        image: [coverUrl], // or [OG_IMAGE] if you want logo as the schema image
+        image: [coverUrl],  
         datePublished: publishedDate,
         dateModified: modifiedDate,
         author: {
@@ -40,8 +37,7 @@ function BestHoardingLocationBlog() {
         publisher: {
             "@type": "Organization",
             name: SITE_NAME,
-            url: SITE_URL,
-            // Optional logo
+            url: SITE_URL, 
             // logo: { "@type": "ImageObject", url: `${SITE_URL}/assets/logo.png` }
         },
         mainEntityOfPage: {

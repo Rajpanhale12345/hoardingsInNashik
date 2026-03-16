@@ -2,8 +2,7 @@ import React from "react";
 import "./Services.css";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-
-// Import images individually
+ 
 import cityCentral from "./images/CCM.png";
 import mumbaiNaka from "./images/Mumbai_naka.png";
 import ashokStambh from "./images/grid3.jpeg";
@@ -197,8 +196,7 @@ function Hoardings() {
     areaServed: ["Nashik, Maharashtra, India"],
     knowsAbout: ["Outdoor Advertising", "Hoardings", "Billboards", "OOH Advertising"]
   };
-
-  // Optional: ItemList schema for your location list
+ 
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",

@@ -29,8 +29,7 @@
   height: auto;
   border-radius: 8px;
 }
-
-/* LEFT-TO-RIGHT CONTENT LAYOUT */
+ 
 .text {
   text-align: left;
   padding: 0 2rem;
@@ -64,8 +63,7 @@
   color: rgb(10, 117, 117);
   font-style: italic;
 }
-
-/* CTA Styling */
+ 
 .cta-container {
   text-align: center;
   margin: 3rem auto;
@@ -102,8 +100,7 @@
 .cta-button:hover {
   background-color: #f3f3f3;
 }
-
-/* Media Queries for Responsiveness */
+ 
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
