@@ -4,128 +4,212 @@
   padding: 0;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
 }
 
+body {
+  font-family: Arial, sans-serif;
+}
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem; 
-  background-color: #ffffff;
-  color: rgb(13, 8, 80);
   position: sticky;
   top: 0;
   z-index: 1000;
-  margin-top: -60px;
-  width: 100%;      
-  max-width: 100%;     
-} 
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+}
+
+.navbar-logo {
+  flex-shrink: 0;
+}
 
 .navbar-logo a {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  margin-top: -60px;
 }
 
 .navbar-logo img {
-  height: 120px;
-  width: 120px;
-  object-fit: cover;
-  margin-top: -30px;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  display: block;
 }
- 
+
 .navbar-links {
   display: flex;
-  gap: 3rem;
-  margin-right: 50px;
-  margin-top: -40px;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
 }
 
 .navbar-links a {
   color: rgb(24, 30, 143);
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .navbar-links a:hover {
   color: #f39c12;
 }
- 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  margin-top: -40px;
-  margin-right: 20px;
-}
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: rgb(24, 30, 143); 
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
- 
-@media (max-width: 768px) {
-  .navbar-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #111;
-    flex-direction: column;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    text-align: center;
-    margin-top: 1px;
-    margin-right: -3px;
-  }
-
-  .navbar-links.active {
-    background-color: rgb(24, 30, 143);
-    max-height: 500px;
-    padding: 1rem 0;
-  }
-
-  .navbar-links a {
-    padding: 1rem;
-    color: white;
-    border-top: 1px solid #222;
-  }
-
-  .hamburger {
-    display: flex;
-    margin-right: -37px;
-  }
-}
-
-
-/* Social Media Icons */
 .social-icons {
   display: flex;
-  gap: 15px;
-  margin-right: 20px;
-  margin-top: -40px;
+  align-items: center;
+  gap: 0.9rem;
+  flex-shrink: 0;
 }
 
 .social-icons a {
   color: rgb(24, 30, 143);
-  font-size: 18px;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
   color: #f39c12;
   transform: translateY(-2px);
+}
+
+.hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background-color: rgb(24, 30, 143);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Optional hamburger animation */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Large tablets / medium screens */
+@media (max-width: 992px) {
+  .navbar-container {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-links {
+    gap: 1.25rem;
+  }
+
+  .navbar-logo img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .social-icons {
+    gap: 0.7rem;
+  }
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-logo img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #eaeaea;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .navbar-links.active {
+    max-height: 400px;
+  }
+
+  .navbar-links a {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #f1f1f1;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .navbar-logo img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .navbar-links a {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
 }
