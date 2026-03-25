@@ -32,7 +32,7 @@ function Contact() {
       const response = await fetch("https://sheetdb.io/api/v1/i7c0yknz2m4zb", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ data: formData }),
+        body: JSON.stringify({ data: formData }),  
       });
 
       if (response.ok) {

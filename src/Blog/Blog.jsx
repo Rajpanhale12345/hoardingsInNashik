@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Blog.css";
 import blog1 from "./Images/BestHoardingLocation.webp";
 import blog2 from "./Images/Jail_Road.png";
+import blog3 from "./Images/Dredv-79.jpg";
 
 function Blog() {
   const SITE_NAME = "Hoardings In Nashik";
@@ -32,6 +33,14 @@ function Blog() {
       title: "Hoarding Design Tips for Nashik: What Works on High-Speed Roads and Signals",
       excerpt: "Design smarter Nashik hoardings for speed, signals, and maximum brand recall",
       datePublished: "2026-02-14"
+    },
+    {
+      id: 3,
+      slug: "How-to-Choose-the-Best-Hoarding",
+      image: blog3,
+      title: "How to Choose the Best Hoarding Location in Nashik for Your Business",
+      excerpt: "Choosing the right hoarding location in Nashik isn’t about space it’s about strategy. Place your brand where people already look, stop, and remember.",
+      datePublished: "2026-03-24"
     }
   ];
 

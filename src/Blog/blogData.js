@@ -1,5 +1,3 @@
-// src/blog/blogData.js
-
 import blog1Img from "../images/College_Road.png";
 import blog2Img from "../images/College_Road.png";
 
@@ -32,6 +30,29 @@ Check traffic, sightlines, and nearby signals for maximum attention.
   {
     id: 2,
     slug: "how-to-book-a-hoarding-in-nashik",
+    title: "How to Book a Hoarding in Nashik (Step-by-step)",
+    excerpt:
+      "From choosing a location to artwork sizing, permissions, and timelines—here’s the complete process.",
+    coverImage: blog2Img,
+    date: "2026-02-10",
+    author: "Hoardings In Nashik",
+    category: "How-To",
+    readTime: "5 min read",
+    content: `
+## Step 1: Choose your goal
+Branding, leads, event promotion—your goal changes the best location.
+
+## Step 2: Pick the location
+Select areas based on your target audience routes.
+
+## Step 3: Finalize creative
+Use large fonts, high contrast, and minimal text.
+    `.trim()
+  },
+
+  {
+    id: 3,
+    slug: "How-to-Choose-the-Best-Hoarding",
     title: "How to Book a Hoarding in Nashik (Step-by-step)",
     excerpt:
       "From choosing a location to artwork sizing, permissions, and timelines—here’s the complete process.",

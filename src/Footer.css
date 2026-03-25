@@ -24,8 +24,7 @@ body,
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* First Section */
+ 
 .footer-top {
   display: flex;
   justify-content: space-between;
@@ -59,8 +58,7 @@ body,
 .footer-nav a:hover {
   color: #f39c12;
 }
-
-/* Second Section */
+ 
 .footer-bottom {
   display: flex;
   flex-direction: column;
@@ -102,8 +100,7 @@ body,
 .footer-copy a:hover {
   color: #f39c12;
 }
-
-/* Tablet */
+ 
 @media (max-width: 768px) {
   .footer-top {
     flex-direction: column;
@@ -119,8 +116,7 @@ body,
     width: 110px;
   }
 }
-
-/* Mobile */
+ 
 @media (max-width: 480px) {
   .footer {
     padding: 1.5rem 1rem;
