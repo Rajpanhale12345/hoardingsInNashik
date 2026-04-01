@@ -12,10 +12,11 @@ const staticRoutes = [
   "/blog"
 ];
 
-// Blog posts
+// Blog posts (FIXED: lowercase + added missing one)
 const blogSlugs = [
   "best-hoarding-location-in-nashik-for-maximum-brand-visibility",
-  "hoarding-advertising-in-nashik-guide"
+  "hoarding-advertising-in-nashik-guide",
+  "how-to-choose-the-best-hoarding"
 ];
 
 const blogRoutes = blogSlugs.map(slug => `/blog/${slug}`);
@@ -29,6 +30,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 ${routes.map(route => {
   const priority =
     route === "/" ? "1.0" :
+    route === "/services" ? "0.9" :
     route === "/blog" ? "0.9" :
     "0.8";
 
@@ -45,13 +47,14 @@ ${routes.map(route => {
 }).join("")}
 </urlset>`;
 
-const publicPath = path.resolve("public");
-const filePath = path.join(publicPath, "sitemap.xml");
+// IMPORTANT: write to dist (not public) for deployment
+const distPath = path.resolve("dist");
+const filePath = path.join(distPath, "sitemap.xml");
 
-if (!fs.existsSync(publicPath)) {
-  fs.mkdirSync(publicPath, { recursive: true });
+if (!fs.existsSync(distPath)) {
+  fs.mkdirSync(distPath, { recursive: true });
 }
 
 fs.writeFileSync(filePath, sitemap, "utf8");
 
-console.log("✅ Sitemap generated successfully!");
+console.log("✅ Sitemap generated in /dist!");

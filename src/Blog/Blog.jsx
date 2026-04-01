@@ -36,7 +36,7 @@ function Blog() {
     },
     {
       id: 3,
-      slug: "How-to-Choose-the-Best-Hoarding",
+      slug: "how-to-choose-the-best-hoarding",
       image: blog3,
       title: "How to Choose the Best Hoarding Location in Nashik for Your Business",
       excerpt: "Choosing the right hoarding location in Nashik isn’t about space it’s about strategy. Place your brand where people already look, stop, and remember.",
