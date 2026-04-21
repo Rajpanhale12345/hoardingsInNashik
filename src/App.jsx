@@ -12,13 +12,11 @@ import BestHoardingLocationBlog from "./Blog/BestHoardingLocationBlog";
 import HoardingAdvertisingNashik from "./Blog/HoardingAdvertisingNashik";
 import ChooseHoardingLocation from "./Blog/Choose-Hoarding-Location"
 import Sitemap from "./Sitemap";
-import usePageTracking from "./usePageTracking";
 import PageTracker from "./PageTracker";
 
 
 
 function App() {
-  usePageTracking();
   return (
     <BrowserRouter>
       <PageTracker />
