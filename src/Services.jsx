@@ -250,6 +250,8 @@ function Hoardings() {
               src={item.image}
               alt={item.name}
               className="hoarding-image"
+              loading="lazy"
+              decoding="async"
             />
 
             <div className="hoarding-info">
