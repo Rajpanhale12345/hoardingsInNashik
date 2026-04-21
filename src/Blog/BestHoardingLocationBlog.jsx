@@ -98,8 +98,10 @@ function BestHoardingLocationBlog() {
                 <img
                     src={blogCover}
                     alt="Best hoarding location in Nashik for maximum brand visibility"
+                    title="Best Hoarding Location in Nashik for Maximum Brand Visibility (2026 Guide)"
                     className="post-cover"
                     loading="lazy"
+                    decoding="async"
                     width="1200"
                     height="630"
                 />

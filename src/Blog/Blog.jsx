@@ -79,14 +79,14 @@ function Blog() {
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={PAGE_URL} />
-        <meta name="robots" content="index,follow" /> 
+        <meta name="robots" content="index,follow" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="Hoardings In Nashik - Outdoor Advertising Blog" /> 
+        <meta property="og:image:alt" content="Hoardings In Nashik - Outdoor Advertising Blog" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
@@ -109,7 +109,10 @@ function Blog() {
               <img
                 src={blog.image}
                 alt={blog.title}
+                title={blog.title}
                 className="blog-image"
+                loading="lazy"
+                decoding="async"
               />
 
               <div className="blog-card-body">

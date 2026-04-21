@@ -2,7 +2,7 @@ import React from "react";
 import "./Services.css";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
- 
+
 import cityCentral from "./images/CCM.png";
 import mumbaiNaka from "./images/Mumbai_naka.png";
 import ashokStambh from "./images/Ashok Stambh.jpeg";
@@ -30,7 +30,7 @@ import trimbakroad from "./images/Trimurti_chowk.png";
 
 function Hoardings() {
   const SITE_NAME = "Hoardings In Nashik";
-  const SITE_URL = "https://hoardingsinnashik.com"; 
+  const SITE_URL = "https://hoardingsinnashik.com";
   const PAGE_PATH = "/services";
   const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
   const OG_IMAGE = `https://hoardingsinnashik.com/assets/Nashiklogo-D7jJA0bl.png`;
@@ -46,145 +46,169 @@ function Hoardings() {
       id: 1,
       name: "City Central Mall",
       area: "City Central Mall, Nashik",
-      image: cityCentral
+      image: cityCentral,
+      title: "City Central Mall",
     },
     {
       id: 2,
       name: "Mumbai Naka",
       area: "Mumbai Naka, Nashik",
-      image: mumbaiNaka
+      image: mumbaiNaka,
+      title: "Mumbai Naka",
     },
     {
       id: 3,
       name: "Ashok Stambh",
       area: "Ashok Stambh, Nashik",
-      image: ashokStambh
+      image: ashokStambh,
+      title: "Ashok Stambh",
     },
     {
       id: 4,
       name: "Gangapur Road",
       area: "Gangapur Road, Nashik",
-      image: gangapurRoad
+      image: gangapurRoad,
+      title: "Gangapur Road",
     },
     {
       id: 5,
       name: "College Road",
       area: "College Road, Nashik",
-      image: collegeRoad
+      image: collegeRoad,
+      title: "College Road",
     },
     {
       id: 6,
       name: "Pathardi Phata",
       area: "Pathardi Phata, Nashik",
-      image: pathardiPhata
+      image: pathardiPhata,
+      title: "Pathardi Phata",
     },
     {
       id: 7,
       name: "Jehan Circle",
       area: "Jehan Circle, Nashik",
-      image: jihandcircle
+      image: jihandcircle,
+      title: "Jehan Circle",
     },
     {
       id: 8,
       name: "Dongre Vasti Gruh",
       area: "Dongre Vasti Gruh, Nashik",
-      image: dongarewastigruh
+      image: dongarewastigruh,
+      title: "Dongare Vasti Gruh",
     },
     {
       id: 9,
       name: "Trimbak Road",
       area: "Trimbak Road, Nashik",
-      image: trimbakroad
+      image: trimbakroad,
+      title: "Trimbak Road",
     },
     {
       id: 10,
       name: "MICO Circle",
       area: "MICO Circle, Nashik",
-      image: mycocircle
+      image: mycocircle,
+      title: "MICO Circle",
     },
     {
       id: 11,
       name: "ABB Circle",
       area: "ABB Circle, Nashik",
-      image: abpcircle
+      image: abpcircle,
+      title: "ABB Circle",
     },
     {
       id: 12,
       name: "Indira Nagar",
       area: "Indira Nagar, Nashik",
-      image: indiranagar
+      image: indiranagar,
+      title: "Indira Nagar",
     },
     {
       id: 13,
       name: "Nashik Road",
       area: "Nashik Road, Nashik",
-      image: nashikroad
+      image: nashikroad,
+      title: "Nashik Road",
     },
     {
       id: 14,
       name: "Jail Road",
       area: "Jail Road, Nashik",
-      image: jailroad
+      image: jailroad,
+      title: "Jail Road",
     },
     {
       id: 15,
       name: "Adgaon Naka",
       area: "Adgaon Naka, Nashik",
-      image: adgaonnaka
+      image: adgaonnaka,
+      title: "Adgaon Naka",
     },
     {
       id: 16,
       name: "Trimurti Chowk",
       area: "Trimurti Chowk, Nashik",
-      image: trimurtichauck
+      image: trimurtichauck,
+      title: "Trimurti Chowk",
     },
     {
       id: 17,
       name: "CBS",
       area: "CBS, Nashik",
-      image: cbs
+      image: cbs,
+      title: "CBS",
     },
     {
       id: 18,
       name: "Panchavati",
       area: "Panchavati, Nashik",
-      image: panchavati
+      image: panchavati,
+      title: "Panchasvati",
     },
     {
       id: 19,
       name: "Raviwar Karanja",
       area: "Raviwar Karanja, Nashik",
-      image: ravivarkaranja
+      image: ravivarkaranja,
+      title: "Raviwar Karanja",
     },
     {
       id: 20,
       name: "Satpur MIDC",
       area: "Satpur MIDC, Nashik",
-      image: satputmidc
+      image: satputmidc,
+      title: "Satpur MIDC",
     },
     {
       id: 21,
       name: "Deolali Camp Road",
       area: "Deolali Camp Road, Nashik",
-      image: devlalicamproad
+      image: devlalicamproad,
+      title: "Deolali Camp Road",
     },
     {
       id: 22,
       name: "Bytco Point",
       area: "Bytco Point, Nashik",
-      image: bytcopoint
+      image: bytcopoint,
+      title: "Bytco Point",
     },
     {
       id: 23,
       name: "Ashoka Marg",
       area: "Ashoka Marg, Nashik",
-      image: ashokamark
+      image: ashokamark,
+      title: "Ashoka Marg",
     },
     {
       id: 24,
       name: "Pipeline Road",
       area: "Pipeline Road, Nashik",
-      image: pipelineroad
+      image: pipelineroad,
+      title: "Pipeline Road",
     }
   ];
 
@@ -196,7 +220,7 @@ function Hoardings() {
     areaServed: ["Nashik, Maharashtra, India"],
     knowsAbout: ["Outdoor Advertising", "Hoardings", "Billboards", "OOH Advertising"]
   };
- 
+
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -249,6 +273,7 @@ function Hoardings() {
             <img
               src={item.image}
               alt={item.name}
+              title={item.title}
               className="hoarding-image"
               loading="lazy"
               decoding="async"

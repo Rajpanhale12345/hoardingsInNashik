@@ -45,16 +45,56 @@ function Home() {
   }, [letterIndex, wordIndex]);
 
   const locationImages = [
-    mumbainaka,
-    collegeroad,
-    MGroad,
-    Dwarka,
-    CBS,
-    Satpur,
-    Sinnar,
-    Untewadi,
-    Pachavati,
-    Nashikroad
+    {
+      src: mumbainaka,
+      name: "Mumbai Naka",
+      title: "Hoarding at Mumbai Naka, Nashik"
+    },
+    {
+      src: collegeroad,
+      name: "College Road",
+      title: "Hoarding at College Road, Nashik"
+    },
+    {
+      src: MGroad,
+      name: "MG Road",
+      title: "Hoarding at MG Road, Nashik"
+    },
+    {
+      src: Dwarka,
+      name: "Dwarka",
+      title: "Hoarding at Dwarka, Nashik"
+    },
+    {
+      src: CBS,
+      name: "CBS",
+      title: "Hoarding at CBS, Nashik"
+    },
+    {
+      src: Satpur,
+      name: "Satpur",
+      title: "Hoarding at Satpur MIDC, Nashik"
+    },
+    {
+      src: Sinnar,
+      name: "Sinnar",
+      title: "Hoarding at Sinnar area, Nashik"
+    },
+    {
+      src: Untewadi,
+      name: "Indira Nagar",
+      title: "Hoarding at Untewadi, Nashik"
+    },
+    {
+      src: Pachavati,
+      name: "Panchavati",
+      title: "Hoarding at Panchavati, Nashik"
+    },
+    {
+      src: Nashikroad,
+      name: "Nashik Road",
+      title: "Hoarding at Nashik Road, Nashik"
+    }
   ];
 
   return (
@@ -91,10 +131,25 @@ function Home() {
 
         <Carousel showThumbs={false} autoPlay infiniteLoop>
           <div>
-            <img src={mockup} alt="Slide 1" loading='lazy' />
+            <img
+              src={mockup}
+              alt="Best hoarding locations in Nashik"
+              loading="lazy"
+            />
+            <p className="legend">
+              Best Hoarding Locations in Nashik for Maximum Visibility
+            </p>
           </div>
+
           <div>
-            <img src={Billboard1} alt="Slide 2" loading='lazy' />
+            <img
+              src={Billboard1}
+              alt="Billboard at Jail Road Nashik"
+              loading="lazy"
+            />
+            <p className="legend">
+              Outdoor Advertising Billboard at Jail Road, Nashik
+            </p>
           </div>
         </Carousel>
 
@@ -103,11 +158,12 @@ function Home() {
         <br /><br /><br />
 
         <div className='vector-images'>
-          {locationImages.map((img, index) => (
+          {locationImages.map((item, index) => (
             <img
               key={index}
-              src={img}
-              alt="Nashik hoarding location"
+              src={item.src}
+              alt={item.name}
+              title={item.title}
               loading="lazy"
               onClick={() => {
                 setSelectedIndex(index);
@@ -120,7 +176,7 @@ function Home() {
         {showModal && (
           <div className="modal-overlay">
             <div className="modal-content">
- 
+
               <button
                 className="close-btn"
                 onClick={() => setShowModal(false)}
@@ -137,9 +193,14 @@ function Home() {
                 useKeyboardArrows
                 emulateTouch
               >
-                {locationImages.map((img, index) => (
+                {locationImages.map((item, index) => (
                   <div key={index}>
-                    <img src={img} alt="Nashik hoarding location" />
+                    <img
+                      src={item.src}
+                      alt={item.name}
+                      title={item.title}
+                      loading="lazy"
+                    />
                   </div>
                 ))}
               </Carousel>
